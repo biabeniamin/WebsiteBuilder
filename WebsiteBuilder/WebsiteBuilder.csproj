@@ -82,6 +82,7 @@
     <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\Image.cs" />
     <Compile Include="Models\Intent.cs" />
+    <Compile Include="Models\Page.cs" />
     <Compile Include="Models\Response.cs" />
     <Compile Include="Models\TopScoringIntent.cs" />
     <Compile Include="Models\Website.cs" />
