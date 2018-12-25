@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -14,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WebsiteBuilder.Models;
 
 namespace WebsiteBuilder
 {
@@ -58,6 +60,9 @@ namespace WebsiteBuilder
 
             // Display the JSON result from LUIS
             Console.WriteLine(strResponseContent.ToString());
+
+            Response r = JsonConvert.DeserializeObject<Response>(strResponseContent);
+            Console.WriteLine(r.Query);
         }
 
     }
