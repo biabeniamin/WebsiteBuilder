@@ -10,6 +10,14 @@ namespace WebsiteBuilder.Models
     {
         private string name;
         private Background background;
+        private List<Page> pages;
+
+        public List<Page> Pages
+        {
+            get { return pages; }
+            set { pages = value; }
+        }
+
 
         public Background Background
         {
@@ -23,10 +31,17 @@ namespace WebsiteBuilder.Models
             set { name = value; }
         }
 
-        public Website(string name,Background background)
+        public Website(string name,Background background, List<Page> pages)
         {
             this.name = name;
             this.background = background;
+            this.pages = pages;
+        }
+
+        public Website(string name, Background background)
+            :this(name,background, new List<Page>())
+        {
+
         }
 
         public Website(string name)
