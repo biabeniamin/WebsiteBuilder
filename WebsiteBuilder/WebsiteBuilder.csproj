@@ -81,6 +81,7 @@
     <Compile Include="Models\Intent.cs" />
     <Compile Include="Models\Response.cs" />
     <Compile Include="Models\TopScoringIntent.cs" />
+    <Compile Include="Models\Website.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
