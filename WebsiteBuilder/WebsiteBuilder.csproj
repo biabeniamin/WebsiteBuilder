@@ -77,7 +77,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Background.cs" />
+    <Compile Include="Models\Color.cs" />
     <Compile Include="Models\Entity.cs" />
+    <Compile Include="Models\Image.cs" />
     <Compile Include="Models\Intent.cs" />
     <Compile Include="Models\Response.cs" />
     <Compile Include="Models\TopScoringIntent.cs" />
