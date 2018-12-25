@@ -1,0 +1,76 @@
+{
+  "luis_schema_version": "3.1.0",
+  "versionId": "0.1",
+  "name": "first",
+  "desc": "",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "createWebsite"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "pages"
+    }
+  ],
+  "entities": [
+    {
+      "name": "websiteType",
+      "roles": [
+        "contact",
+        "webstore",
+        "presentation"
+      ]
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "create a website",
+      "intent": "createWebsite",
+      "entities": []
+    },
+    {
+      "text": "i need a site",
+      "intent": "createWebsite",
+      "entities": []
+    },
+    {
+      "text": "i want a site",
+      "intent": "createWebsite",
+      "entities": []
+    },
+    {
+      "text": "i want it to have a contact page.",
+      "intent": "pages",
+      "entities": [
+        {
+          "entity": "websiteType",
+          "startPos": 20,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "make a website for me with contact page",
+      "intent": "pages",
+      "entities": [
+        {
+          "entity": "websiteType",
+          "startPos": 27,
+          "endPos": 33
+        }
+      ]
+    }
+  ],
+  "settings": []
+}
