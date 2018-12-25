@@ -12,7 +12,7 @@ namespace WebsiteBuilder
 {
     public class Luis
     {
-        async Task<Response> SendMessage(string question)
+        public async Task<Response> SendMessage(string question)
         {
             Response response;
             HttpClient client;

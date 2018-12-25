@@ -28,42 +28,16 @@ namespace WebsiteBuilder
         {
             InitializeComponent();
 
-            MakeRequest();
-
+            Test();
         }
 
-        static async void MakeRequest()
+        private async void Test()
         {
-            var client = new HttpClient();
-            var queryString = HttpUtility.ParseQueryString(string.Empty);
 
-            // This app ID is for a public sample app that recognizes requests to turn on and turn off lights
-            var luisAppId = LuisCredentials.AppId;
-            var endpointKey = LuisCredentials.EndpointKey;
-
-            // The request header contains your subscription key
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", endpointKey);
-
-            // The "q" parameter contains the utterance to send to LUIS
-            queryString["q"] = "i want to build a website";
-
-            // These optional request parameters are set to their default values
-            queryString["timezoneOffset"] = "0";
-            queryString["verbose"] = "false";
-            queryString["spellCheck"] = "false";
-            queryString["staging"] = "false";
-
-            var endpointUri = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/" + luisAppId + "?" + queryString;
-            var response = await client.GetAsync(endpointUri);
-
-            var strResponseContent = await response.Content.ReadAsStringAsync();
-
-            // Display the JSON result from LUIS
-            Console.WriteLine(strResponseContent.ToString());
-
-            Response r = JsonConvert.DeserializeObject<Response>(strResponseContent);
-            Console.WriteLine(r.Query);
+            Luis luis = new Luis();
+            Response r = await luis.SendMessage("i want a website");
+            Console.WriteLine(r);
         }
-
+         
     }
 }
