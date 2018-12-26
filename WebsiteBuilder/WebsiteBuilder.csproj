@@ -69,6 +69,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Enums\WebsiteType.cs" />
     <Compile Include="Luis.cs" />
     <Compile Include="LuisCredentials.cs" />
     <Compile Include="MainWindow.xaml.cs">
