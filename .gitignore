@@ -330,4 +330,4 @@ ASALocalRun/
 .mfractor/
 
 #api valuie
-WebsiteBuilder/LuisCredentials.cs
+WebsiteBuilder/Luis/LuisCredentials.cs
