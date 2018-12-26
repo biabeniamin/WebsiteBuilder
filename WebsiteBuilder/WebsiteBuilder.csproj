@@ -70,8 +70,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Enums\WebsiteType.cs" />
-    <Compile Include="Luis.cs" />
-    <Compile Include="LuisCredentials.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -80,12 +78,8 @@
   <ItemGroup>
     <Compile Include="Models\Background.cs" />
     <Compile Include="Models\Color.cs" />
-    <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\Image.cs" />
-    <Compile Include="Models\Intent.cs" />
     <Compile Include="Models\Page.cs" />
-    <Compile Include="Models\Response.cs" />
-    <Compile Include="Models\TopScoringIntent.cs" />
     <Compile Include="Models\Website.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -112,6 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
