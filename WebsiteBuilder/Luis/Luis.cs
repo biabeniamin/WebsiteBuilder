@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Web;
 using WebsiteBuilder.Models;
 
-namespace WebsiteBuilder
+namespace Luis
 {
     public class Luis
     {

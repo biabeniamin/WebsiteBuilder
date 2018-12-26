@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebsiteBuilder.Models
+namespace Luis.Models
 {
     public class TopScoringIntent
     {
