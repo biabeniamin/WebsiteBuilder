@@ -46,7 +46,7 @@
   <ItemGroup>
     <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\Intent.cs" />
-    <Compile Include="Luis.cs" />
+    <Compile Include="LuisApi.cs" />
     <Compile Include="LuisCredentials.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Response.cs" />

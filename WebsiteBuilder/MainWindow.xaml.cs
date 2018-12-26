@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -16,6 +15,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WebsiteBuilder.Models;
+using Luis;
+using Luis.Models;
 
 namespace WebsiteBuilder
 {
@@ -34,7 +35,7 @@ namespace WebsiteBuilder
         private async void Test()
         {
 
-            Luis luis = new Luis();
+            LuisApi luis = new LuisApi();
             Response r = await luis.SendMessage("i want a website");
             Console.WriteLine(r);
         }

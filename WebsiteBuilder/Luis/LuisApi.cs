@@ -10,7 +10,7 @@ using Luis.Models;
 
 namespace Luis
 {
-    public class Luis
+    public class LuisApi
     {
         public async Task<Response> SendMessage(string question)
         {
