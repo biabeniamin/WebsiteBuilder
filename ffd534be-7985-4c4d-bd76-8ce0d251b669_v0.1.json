@@ -49,15 +49,20 @@
   "patterns": [],
   "utterances": [
     {
-      "text": "change backgroun to {colors}",
+      "text": "change background color to colors",
       "intent": "backgroundColor",
       "entities": [
         {
           "entity": "colors",
-          "startPos": 21,
-          "endPos": 26
+          "startPos": 27,
+          "endPos": 32
         }
       ]
+    },
+    {
+      "text": "change background to colors",
+      "intent": "backgroundColor",
+      "entities": []
     },
     {
       "text": "create a website",
@@ -97,15 +102,9 @@
       ]
     },
     {
-      "text": "make background color {colors}",
+      "text": "make background color colors",
       "intent": "backgroundColor",
-      "entities": [
-        {
-          "entity": "colors",
-          "startPos": 23,
-          "endPos": 28
-        }
-      ]
+      "entities": []
     }
   ],
   "settings": []
