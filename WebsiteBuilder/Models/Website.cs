@@ -58,7 +58,12 @@ namespace WebsiteBuilder.Models
             :this(name, new Background(Color.White), type)
         {
 
-        } 
+        }
+
+        public override string ToString()
+        {
+            return JsonConvert
+        }
 
     }
 }
