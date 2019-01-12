@@ -14,6 +14,22 @@ namespace Generator
         private LuisApi luisApi;
         private Website website;
 
+        private string ChangeBackgroundColor(Response luisResponse)
+        {
+            string response;
+
+            response = "The color was changed successfully!";
+
+            if(0 == luisResponse.Entities.Count)
+            {
+                return "Sorry, i don't understand the question.";
+            }
+
+            website.Background.BackgroundColor = Color.FromString(luisResponse.Entities[0].Name);
+
+            return response;
+        }
+
         public async Task<string> SendMessage(string message)
         {
             string response;
@@ -21,10 +37,15 @@ namespace Generator
 
             response = "";
             luisResponse = null;
+            response = "ok";
 
             luisResponse = await luisApi.SendMessage(message);
 
-            response = "ok";
+            if("backgroundColor" == luisResponse.TopScoringIntent.Intent)
+            {
+                response = ChangeBackgroundColor(luisResponse);
+            }
+
 
             return response;
             
