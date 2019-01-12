@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Generator.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -77,6 +78,41 @@ namespace Generator.Models
             {
                 return new Color(255, 255, 255);
             }
+        }
+
+        public static Color FromString(string colorName)
+        {
+            Color color;
+            Colors colorEnum;
+
+            color = Color.White;
+            colorEnum = Colors.White;
+
+            try
+            {
+                int r, g, b;
+                int colorValue;
+
+                r = 0;
+                g = 0;
+                b = 0;
+                colorValue = 0;
+
+                colorEnum = (Colors)Enum.Parse(typeof(Colors), colorName, true);
+                colorValue = (int)colorEnum;
+
+                r = (colorValue >> 0x10) & 0xFF;
+                g = (colorValue >> 0x08) & 0xFF;
+                b = (colorValue >> 0x00) & 0xFF;
+
+                color = new Color((byte)r, (byte)g, (byte)b);
+            }
+            catch (Exception ee)
+            {
+            }
+
+
+            return color;
         }
     }
 }
