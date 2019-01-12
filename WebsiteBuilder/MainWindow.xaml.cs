@@ -15,6 +15,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Generator;
+using Generator.Models;
+using Generator.Enums;
 using Luis;
 
 namespace WebsiteBuilder
@@ -34,7 +36,9 @@ namespace WebsiteBuilder
         private async void Test()
         {
             LuisApi luis = new LuisApi();
-            Interpreter interpreter = new Interpreter(luis, null);
+            Website website = new Website("TEst", new Background(Generator.Models.Color.Blue), WebsiteType.Business);
+            Interpreter interpreter = new Interpreter(luis, website);
+
 
             interpreter.SendMessage("change background color to red");
         }
