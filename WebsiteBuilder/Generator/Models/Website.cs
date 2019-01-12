@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebsiteBuilder.Enums;
+using Generator.Enums;
 
-namespace WebsiteBuilder.Models
+namespace Generator.Models
 {
     public class Website
     {
