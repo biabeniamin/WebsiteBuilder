@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interpreter.cs" />
     <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\Intent.cs" />
     <Compile Include="LuisApi.cs" />

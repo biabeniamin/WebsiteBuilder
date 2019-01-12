@@ -69,18 +69,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Enums\WebsiteType.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Background.cs" />
-    <Compile Include="Models\Color.cs" />
-    <Compile Include="Models\Image.cs" />
-    <Compile Include="Models\Page.cs" />
-    <Compile Include="Models\Website.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -111,6 +105,10 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Generator\Generator.csproj">
+      <Project>{3059807c-960e-4aee-bd9e-6f5390f64a7f}</Project>
+      <Name>Generator</Name>
+    </ProjectReference>
     <ProjectReference Include="Luis\Luis.csproj">
       <Project>{d46181c0-b62c-4f09-91f4-fb67201166c8}</Project>
       <Name>Luis</Name>
