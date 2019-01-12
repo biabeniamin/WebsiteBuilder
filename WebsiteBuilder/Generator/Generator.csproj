@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\Colors.cs" />
     <Compile Include="Enums\WebsiteType.cs" />
     <Compile Include="Interpreter.cs" />
     <Compile Include="Models\Background.cs" />
