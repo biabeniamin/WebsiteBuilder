@@ -14,7 +14,7 @@ namespace Generator
         private LuisApi luisApi;
         private Website website;
 
-        private async Task<string> SendMessage(string message)
+        public async Task<string> SendMessage(string message)
         {
             string response;
             Response luisResponse;

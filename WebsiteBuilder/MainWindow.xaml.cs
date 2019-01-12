@@ -15,8 +15,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Generator;
+<<<<<<< HEAD
+<<<<<<< HEAD
 using Generator.Models;
 using Generator.Enums;
+=======
+>>>>>>> 82d50d0... simple use scenario added
+=======
+using Generator.Models;
+using Generator.Enums;
+>>>>>>> 0de78bb... simple website added to sample
 using Luis;
 
 namespace WebsiteBuilder
@@ -36,9 +44,19 @@ namespace WebsiteBuilder
         private async void Test()
         {
             LuisApi luis = new LuisApi();
+<<<<<<< HEAD
+<<<<<<< HEAD
             Website website = new Website("TEst", new Background(Generator.Models.Color.Blue), WebsiteType.Business);
             Interpreter interpreter = new Interpreter(luis, website);
 
+=======
+            Interpreter interpreter = new Interpreter(luis, null);
+>>>>>>> 82d50d0... simple use scenario added
+=======
+            Website website = new Website("TEst", new Background(Generator.Models.Color.Blue), WebsiteType.Business);
+            Interpreter interpreter = new Interpreter(luis, website);
+
+>>>>>>> 0de78bb... simple website added to sample
 
             interpreter.SendMessage("change background color to red");
         }
