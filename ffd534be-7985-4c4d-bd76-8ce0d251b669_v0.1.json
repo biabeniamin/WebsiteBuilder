@@ -1,10 +1,14 @@
 {
-  "luis_schema_version": "3.1.0",
+  "luis_schema_version": "3.2.0",
   "versionId": "0.1",
   "name": "first",
   "desc": "",
   "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
   "intents": [
+    {
+      "name": "backgroundColor"
+    },
     {
       "name": "createWebsite"
     },
@@ -16,6 +20,16 @@
     }
   ],
   "entities": [
+    {
+      "name": "colors",
+      "roles": [
+        "pink",
+        "green",
+        "red",
+        "blue",
+        "yellow"
+      ]
+    },
     {
       "name": "websiteType",
       "roles": [
@@ -34,6 +48,17 @@
   "regex_features": [],
   "patterns": [],
   "utterances": [
+    {
+      "text": "change backgroun to {colors}",
+      "intent": "backgroundColor",
+      "entities": [
+        {
+          "entity": "colors",
+          "startPos": 21,
+          "endPos": 26
+        }
+      ]
+    },
     {
       "text": "create a website",
       "intent": "createWebsite",
@@ -68,6 +93,17 @@
           "entity": "websiteType",
           "startPos": 27,
           "endPos": 33
+        }
+      ]
+    },
+    {
+      "text": "make background color {colors}",
+      "intent": "backgroundColor",
+      "entities": [
+        {
+          "entity": "colors",
+          "startPos": 23,
+          "endPos": 28
         }
       ]
     }
