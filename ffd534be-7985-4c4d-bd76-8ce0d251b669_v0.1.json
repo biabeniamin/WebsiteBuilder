@@ -7,6 +7,9 @@
   "tokenizerVersion": "1.0.0",
   "intents": [
     {
+      "name": "addPage"
+    },
+    {
       "name": "backgroundColor"
     },
     {
@@ -49,6 +52,11 @@
   "patterns": [],
   "utterances": [
     {
+      "text": "add a new page",
+      "intent": "addPage",
+      "entities": []
+    },
+    {
       "text": "change background color to colors",
       "intent": "backgroundColor",
       "entities": [
@@ -65,6 +73,11 @@
       "entities": []
     },
     {
+      "text": "create a new page",
+      "intent": "addPage",
+      "entities": []
+    },
+    {
       "text": "create a website",
       "intent": "createWebsite",
       "entities": []
@@ -72,6 +85,11 @@
     {
       "text": "i need a site",
       "intent": "createWebsite",
+      "entities": []
+    },
+    {
+      "text": "i want a new page",
+      "intent": "addPage",
       "entities": []
     },
     {
