@@ -20,12 +20,31 @@ namespace Generator
 
             response = "The color was changed successfully!";
 
-            if(0 == luisResponse.Entities.Count)
+            if (0 == luisResponse.Entities.Count)
             {
                 return "Sorry, i don't understand the question.";
             }
 
             website.Background.BackgroundColor = Color.FromString(luisResponse.Entities[0].Name);
+
+            return response;
+        }
+
+        private string AddPage(Response luisResponse)
+        {
+            string response;
+            string pageName;
+
+            response = "The page was created!";
+            pageName = "Test";
+
+            //to implement for name
+            /*if (0 == luisResponse.Entities.Count)
+            {
+                return "Sorry, i don't can't create the page right now.";
+            }*/
+
+            website.Pages.Add(new Page(pageName));
 
             return response;
         }
@@ -41,9 +60,13 @@ namespace Generator
 
             luisResponse = await luisApi.SendMessage(message);
 
-            if("backgroundColor" == luisResponse.TopScoringIntent.Intent)
+            if ("backgroundColor" == luisResponse.TopScoringIntent.Intent)
             {
                 response = ChangeBackgroundColor(luisResponse);
+            }
+            else if ("addPage" == luisResponse.TopScoringIntent.Intent)
+            {
+                response = AddPage(luisResponse);
             }
 
 
