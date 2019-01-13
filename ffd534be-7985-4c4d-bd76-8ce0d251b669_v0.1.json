@@ -57,6 +57,11 @@
       "entities": []
     },
     {
+      "text": "add a page",
+      "intent": "addPage",
+      "entities": []
+    },
+    {
       "text": "change background color to colors",
       "intent": "backgroundColor",
       "entities": [
