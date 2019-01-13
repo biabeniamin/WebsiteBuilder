@@ -56,20 +56,11 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9ec855e... main project dependencies for generatpr
   <ItemGroup>
     <ProjectReference Include="..\Luis\Luis.csproj">
       <Project>{d46181c0-b62c-4f09-91f4-fb67201166c8}</Project>
       <Name>Luis</Name>
     </ProjectReference>
   </ItemGroup>
-<<<<<<< HEAD
-=======
->>>>>>> 059a6dd... newton json added
-=======
->>>>>>> 9ec855e... main project dependencies for generatpr
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
