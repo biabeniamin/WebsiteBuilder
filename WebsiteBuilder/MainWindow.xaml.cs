@@ -40,7 +40,7 @@ namespace WebsiteBuilder
             Interpreter interpreter = new Interpreter(luis, website);
 
 
-            interpreter.SendMessage("change background color to red");
+            interpreter.SendMessage("add page");
         }
          
     }
