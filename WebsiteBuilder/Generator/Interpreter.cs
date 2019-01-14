@@ -14,15 +14,17 @@ namespace Generator
         private LuisApi luisApi;
         private Website website;
 
-        private string ChangeBackgroundColor(LuisResponse luisResponse)
+        private Response ChangeBackgroundColor(LuisResponse luisResponse)
         {
-            string response;
+            Response response;
 
-            response = "The color was changed successfully!";
+            response = new Response("The color was changed successfully!");
 
             if (0 == luisResponse.Entities.Count)
             {
-                return "Sorry, i don't understand the question.";
+                response.TextResponse = "Sorry, i don't understand the question.";
+
+                return response;
             }
 
             website.Background.BackgroundColor = Color.FromString(luisResponse.Entities[0].Name);
@@ -30,12 +32,12 @@ namespace Generator
             return response;
         }
 
-        private string AddPage(LuisResponse luisResponse)
+        private Response AddPage(LuisResponse luisResponse)
         {
-            string response;
+            Response response;
             string pageName;
 
-            response = "The page was created!";
+            response = new Response("The page was created!");
             pageName = "Test";
 
             //to implement for name
@@ -49,14 +51,13 @@ namespace Generator
             return response;
         }
 
-        public async Task<string> SendMessage(string message)
+        public async Task<Response> SendMessage(string message)
         {
-            string response;
+            Response response;
             LuisResponse luisResponse;
 
-            response = "";
             luisResponse = null;
-            response = "ok";
+            response = new Response("ok");
 
             luisResponse = await luisApi.SendMessage(message);
 

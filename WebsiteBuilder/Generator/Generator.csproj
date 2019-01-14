@@ -50,6 +50,7 @@
     <Compile Include="Models\Color.cs" />
     <Compile Include="Models\Image.cs" />
     <Compile Include="Models\Page.cs" />
+    <Compile Include="Models\Response.cs" />
     <Compile Include="Models\Website.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
