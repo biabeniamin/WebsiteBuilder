@@ -49,7 +49,7 @@
     <Compile Include="LuisApi.cs" />
     <Compile Include="LuisCredentials.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\Response.cs" />
+    <Compile Include="Models\LuisResponse.cs" />
     <Compile Include="Models\TopScoringIntent.cs" />
   </ItemGroup>
   <ItemGroup>

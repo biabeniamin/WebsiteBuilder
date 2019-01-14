@@ -14,7 +14,7 @@ namespace Generator
         private LuisApi luisApi;
         private Website website;
 
-        private string ChangeBackgroundColor(Response luisResponse)
+        private string ChangeBackgroundColor(LuisResponse luisResponse)
         {
             string response;
 
@@ -30,7 +30,7 @@ namespace Generator
             return response;
         }
 
-        private string AddPage(Response luisResponse)
+        private string AddPage(LuisResponse luisResponse)
         {
             string response;
             string pageName;
@@ -52,7 +52,7 @@ namespace Generator
         public async Task<string> SendMessage(string message)
         {
             string response;
-            Response luisResponse;
+            LuisResponse luisResponse;
 
             response = "";
             luisResponse = null;

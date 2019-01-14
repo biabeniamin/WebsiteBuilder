@@ -12,9 +12,9 @@ namespace Luis
 {
     public class LuisApi
     {
-        public async Task<Response> SendMessage(string question)
+        public async Task<LuisResponse> SendMessage(string question)
         {
-            Response response;
+            LuisResponse response;
             HttpClient client;
             HttpResponseMessage responseHttp;
             string endpointUri;
@@ -44,7 +44,7 @@ namespace Luis
 
             responseJson = await responseHttp.Content.ReadAsStringAsync();
 
-            response = JsonConvert.DeserializeObject<Response>(responseJson.ToString());
+            response = JsonConvert.DeserializeObject<LuisResponse>(responseJson.ToString());
 
             return response;
         }
