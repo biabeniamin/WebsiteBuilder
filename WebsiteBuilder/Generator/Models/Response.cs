@@ -9,6 +9,14 @@ namespace Generator.Models
     public class Response
     {
         private string textResponse;
+        private bool requireResponse;
+
+        public bool RequireResponse
+        {
+            get { return requireResponse; }
+            set { requireResponse = value; }
+        }
+
 
         public string TextResponse
         {
@@ -16,9 +24,15 @@ namespace Generator.Models
             set { textResponse = value; }
         }
 
-        public Response(string textResponse)
+        public Response(string textResponse, bool requireResponse)
         {
             this.textResponse = textResponse;
+            this.requireResponse = requireResponse;
+        }
+
+        public Response(string textResponse)
+            : this(textResponse, false)
+        {
         }
     }
 }
